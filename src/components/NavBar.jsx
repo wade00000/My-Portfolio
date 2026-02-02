@@ -2,22 +2,22 @@ import { NavLink } from "react-router-dom"
 import { useRef } from "react"
 
 function NavBar({time}){
-    const potions = useRef(new Audio("/Potions.mp3"))
+    const audio = useRef(new Audio("/senseixjay.mp3"))
 
     function handleMusic(){
-        if(potions.current.paused){
-            potions.current.play()
+        if(audio.current.paused){
+            audio.current.play()
         }else{
-            potions.current.pause()
+            audio.current.pause()
         }
 
-        potions.current.loop = true
+        audio.current.loop = true
     }
     
     return(
         <nav className="navbar">
            <div className="nav-left">
-                <div className="logo">YourLogo</div>
+                <div className="logo">MyLogo</div>
                 <NavLink to="/app" end>Home</NavLink>
                 <a href="https://www.linkedin.com/in/wade-namada-b1b629363/" target="_blank">LinkedIn</a>
                 <a href="">Resume</a>
