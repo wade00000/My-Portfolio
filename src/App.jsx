@@ -1,12 +1,27 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef } from 'react'
 import './App.css'
-import Navbar from './components/NavBar'
 import NavBar from './components/NavBar'
 
 function App() {
   const [hours,setHours] = useState(0)
   const [minutes,setMinutes] = useState(0)
   const [seconds,setSeconds] = useState(0)
+  const [darkMode,setDarkMode] = useState(false)
+
+  const audio = useRef(new Audio("/senseixjay.mp3"))
+  
+  function handleMusic(){
+      if(audio.current.paused){
+          audio.current.play()
+      }else{
+          audio.current.pause()
+      }
+      audio.current.loop = true
+  }
+
+  function handleDark(){
+    setDarkMode(!darkMode)
+  }
 
   useEffect(()=>{
     function updateTime(){
@@ -32,8 +47,8 @@ function App() {
   
   const timeString = `${hours}:${minutes}:${seconds}`;
   return (
-    <div className="App">
-      <NavBar time={timeString}/>
+    <div className={darkMode ? "dark" : "light"}>
+      <NavBar time={timeString} handleMusic={handleMusic} handleDark={handleDark} darkMode={darkMode}/>
       
     </div>
   )

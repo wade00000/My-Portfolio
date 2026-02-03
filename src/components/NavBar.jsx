@@ -1,18 +1,8 @@
 import { NavLink } from "react-router-dom"
 import { useRef } from "react"
 
-function NavBar({time}){
-    const audio = useRef(new Audio("/senseixjay.mp3"))
-
-    function handleMusic(){
-        if(audio.current.paused){
-            audio.current.play()
-        }else{
-            audio.current.pause()
-        }
-
-        audio.current.loop = true
-    }
+function NavBar({time,handleMusic,handleDark,darkMode}){
+    
     
     return(
         <nav className="navbar">
@@ -28,12 +18,15 @@ function NavBar({time}){
                     {/* GitHub icon here */}
                     GitHub
                 </a>
-                <button 
-                className="music-button"
-                onClick={handleMusic}
-                >
+
+                <button className="music-button" onClick={handleMusic}>
                 Music
                 </button>
+
+                <button className="theme-toggle" onClick={handleDark}>
+                    {darkMode ? '☀️' : '🌙'}
+                </button>
+
                 {time} {/* This is your dark mode toggle I assume? */}
            </div>
         </nav>

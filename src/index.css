@@ -15,3 +15,8 @@ body {
   background: var(--bg-dark);
   color: var(--text-color);
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
