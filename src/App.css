@@ -1,5 +1,9 @@
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between; /* Pushes left and right apart */
   align-items: center;
   padding: 1rem 2rem;
@@ -27,6 +31,10 @@
 
 .sidebar{
   display: flex ;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  right: 0;
   flex-direction: column;
   width: 220px;
   height: 100vh;
@@ -37,12 +45,19 @@
 
 .content {
   display: flex;
+  margin-left: 188px;
+  margin-top: 57px;
+  flex-direction: column;
   flex: 1;
   color: red;
   gap: 1.5rem;
   border-style: dashed;
 }
 
+section {
+  margin-top:55px ;
+  height: 100vh;
+}
 
 
 

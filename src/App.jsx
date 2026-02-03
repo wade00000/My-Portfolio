@@ -2,6 +2,7 @@ import { useEffect, useState,useRef } from 'react'
 import './App.css'
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
+import Content from './components/Content'
 
 function App() {
   const [hours,setHours] = useState(0)
@@ -61,7 +62,8 @@ function App() {
       <NavBar time={timeString} handleMusic={handleMusic} handleDark={handleDark} darkMode={darkMode}/>
       <div className="container">
         <SideBar/>
-        <div className="content"><p>MY NAME IS WADE</p></div>
+        <Content/>
+        
       </div>
       
     </div>

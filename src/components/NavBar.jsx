@@ -14,7 +14,7 @@ function NavBar({time,handleMusic,handleDark,darkMode}){
            </div>
            
            <div className="nav-right">
-                <a href="https://github.com/yourusername" target="_blank">
+                <a href="https://github.com/wade00000" target="_blank">
                     {/* GitHub icon here */}
                     GitHub
                 </a>

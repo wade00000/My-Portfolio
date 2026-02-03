@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --bg-dark: #ffffff;
   --text-color: #000000;
