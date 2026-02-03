@@ -4,6 +4,8 @@
   align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-color); /* Whatever your bg color is */
+  color: blueviolet ;
+  border-style: dashed;
 }
 
 .nav-left {
@@ -17,6 +19,32 @@
   align-items: center;
   gap: 1.5rem;
 }
+.container {
+  display: flex;
+  padding:  0rem 2rem;
+  background: var(--bg-color); /* Whatever your bg color is */
+}
+
+.sidebar{
+  display: flex ;
+  flex-direction: column;
+  width: 220px;
+  height: 100vh;
+  gap: 2rem; /* Space between items */
+  color: blue;
+  border-style: dashed;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  color: red;
+  gap: 1.5rem;
+  border-style: dashed;
+}
+
+
+
 
 .logo {
   font-weight: bold;
