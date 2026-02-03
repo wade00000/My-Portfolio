@@ -25,12 +25,12 @@
 
 .light {
   background-color: white;
-  color: black;
+  color: rgb(0, 0, 0);
   min-height: 100vh;
 }
 
 .dark {
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: white;
   min-height: 100vh;
 }
