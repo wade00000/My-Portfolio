@@ -57,6 +57,7 @@
 section {
   margin-top:55px ;
   height: 100vh;
+  scroll-margin-top: 60px;
 }
 
 
