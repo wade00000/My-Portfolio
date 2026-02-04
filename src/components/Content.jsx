@@ -6,9 +6,13 @@ function Content({setActiveSection}){
 
     useEffect(() => {
         observerRef.current = new IntersectionObserver((entries)=>{
-            entries.forEach(entry =>
-                setActiveSection(entry.target.id)
-            )
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    setActiveSection(entry.target.id)
+                } 
+        })
+        },{
+            
         })
 
         return () => observerRef.current.disconnect()
