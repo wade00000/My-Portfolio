@@ -43,6 +43,11 @@
   border-style: dashed;
 }
 
+.sidebar .active {
+  color:grey;
+  font-weight: bold;
+  /* whatever makes it stand out */
+}
 .content {
   display: flex;
   margin-left: 188px;

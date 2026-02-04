@@ -8,12 +8,12 @@ function App() {
   const [hours,setHours] = useState(0)
   const [minutes,setMinutes] = useState(0)
   const [seconds,setSeconds] = useState(0)
+  const [activeSection, setActiveSection] = useState('')
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first, default to dark mode if nothing saved
     const saved = localStorage.getItem('darkMode')
     return saved !== null ? JSON.parse(saved) : true // true = dark mode by default
   })
-
 
   const audio = useRef( new Audio("/senseixjay.mp3"))
 
@@ -61,8 +61,8 @@ function App() {
     <div className={darkMode ? "dark" : "light"}>
       <NavBar time={timeString} handleMusic={handleMusic} handleDark={handleDark} darkMode={darkMode}/>
       <div className="container">
-        <SideBar/>
-        <Content/>
+        <SideBar activeSection={activeSection}/>
+        <Content setActiveSection={setActiveSection}/>
         
       </div>
       

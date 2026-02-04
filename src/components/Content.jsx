@@ -1,14 +1,36 @@
-function Content(){
+import { useEffect, useState,useRef } from 'react'
+
+function Content({setActiveSection}){
+
+    const observerRef = useRef(null)
+
+    useEffect(() => {
+        observerRef.current = new IntersectionObserver((entries)=>{
+            entries.forEach(entry =>
+                setActiveSection(entry.target.id)
+            )
+        })
+
+        return () => observerRef.current.disconnect()
+      
+    }, [])
+
+    const observer = el => {
+        if (el && observerRef.current){
+            observerRef.current.observe(el)
+        }
+    }
+
     return(
         
         <div className="content">
-            <section id="intro">Introduction</section>
-            <section id ="aboutme">About Me</section>
-            <section id ="projects">Projects</section>
-            <section id ="skills&tools">Skills & Tools</section>
-            <section id ="experience">Experience</section>
-            <section id ="education">Education</section>
-            <section id ="contact">Contact Me</section>
+            <section ref={observer} id="intro">Introduction</section>
+            <section ref={observer} id ="aboutme">About Me</section>
+            <section ref={observer} id ="projects">Projects</section>
+            <section ref={observer} id ="skills&tools">Skills & Tools</section>
+            <section ref={observer} id ="experience">Experience</section>
+            <section ref={observer} id ="education">Education</section>
+            <section ref={observer} id ="contact">Contact Me</section>
         </div>
         
     )
