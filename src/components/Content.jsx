@@ -12,7 +12,7 @@ function Content({setActiveSection}){
                 } 
         })
         },{
-            
+            threshold: 0.5
         })
 
         return () => observerRef.current.disconnect()
