@@ -8,8 +8,7 @@
   align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-color); /* Whatever your bg color is */
-  border-style: dashed;
-  border-color: blueviolet;
+
 }
 
 .nav-left {
@@ -26,7 +25,7 @@
 .container {
   display: flex;
   padding:  0rem 2rem;
-  background: var(--bg-color); /* Whatever your bg color is */
+  background: var(--bg-color); 
 }
 
 .sidebar{
@@ -39,14 +38,13 @@
   width: 220px;
   height: 100vh;
   gap: 2rem; /* Space between items */
-  border-style: dashed;
-  border-color: blue;
+
 }
 
 .sidebar .active {
   color:grey;
   font-weight: bold;
-  /* whatever makes it stand out */
+
 }
 .content {
   display: flex;
@@ -54,9 +52,7 @@
   margin-top: 57px;
   flex-direction: column;
   flex: 1;
-  border-color: red;
   gap: 1.5rem;
-  border-style: dashed;
 }
 
 section {
@@ -86,4 +82,19 @@ a {
   background-color: #000000;
   color: white;
   min-height: 100vh;
+}
+
+.dark .navbar {
+  border-bottom: 1px solid #444; 
+}
+
+.light .navbar {
+  border-bottom: 1px solid #ddd; 
+}
+.dark .sidebar {
+  border-right: 1px solid #444; 
+}
+
+.light .sidebar {
+  border-right: 1px solid #ddd; 
 }
