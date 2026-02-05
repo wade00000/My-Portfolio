@@ -2,9 +2,11 @@
   display: flex;
   position: fixed;
   top: 0;
+
   left: 0;
   right: 0;
   justify-content: space-between; /* Pushes left and right apart */
+
   align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-color);
@@ -49,12 +51,15 @@
   display: flex ;
   position: fixed;
   top: 57px;
+
   left: 0;
   right: 0;
   flex-direction: column;
+
   padding-top: 40px;
   padding-left:20px ;
   width: 220px;
+
   height: 100vh;
   gap: 2rem; /* Space between items */
 
@@ -70,6 +75,7 @@
   background-color: #333; /* dark gray for dark mode */
   color: white;
   font-weight: bold;
+
   padding: 8px 8px; /* some padding around the text */
   border-radius: 4px; /* rounded corners (optional) */
   transition: all 0.3s ease; /* smooth transition */
@@ -105,6 +111,7 @@
   display: flex;
   margin-left: 188px;
   margin-top: 57px;
+
   flex-direction: column;
   flex: 1;
   gap: 1.5rem;
@@ -142,6 +149,53 @@ a {
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
+  font-family: monospace;
+
+  width: 110px;                /* reserve space immediately */
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 5px solid currentColor;
+  padding-right: 2px;
+
+  /* start hidden */
+  clip-path: inset(0 100% 0 0); /* basically clips/hides everything from the right */
+}
+
+/* typing runs only when animate is present */
+.logo.animate {
+  animation:
+    typing 1.2s steps(11) forwards,
+    blink .7s step-end 2s infinite;
+}
+
+/* idle cursor blink */
+.logo:not(.animate) {
+  animation: blink .7s step-end infinite;
+}
+
+/* reveal text without changing layout */
+@keyframes typing {
+  from { clip-path: inset(0 100% 0 0); } /* hides evrything from the right*/
+  to   { clip-path: inset(0 0 0 0); } /*shows everything*/
+}
+
+/* cursor blink */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/* Typing animation - expands width to reveal text character by character */
+@keyframes typing {
+  from { clip-path: inset(0 100% 0 0) } /* Start completely hidden */
+  to { clip-path: inset(0 0 0 0)} /* End fully visible ( I adjusted based on actual text width) */
+}
+
+/* Cursor blinking animation - toggles border visibility */
+@keyframes blink {
+  50% { border-color: transparent; } /* Hide cursor at halfway point */
+  /* At 100%, cursor returns to visible (default color) */
 }
 
 .light {

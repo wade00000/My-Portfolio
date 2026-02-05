@@ -4,14 +4,18 @@ import { RxGithubLogo } from "react-icons/rx";
 import { LuMusic,LuMoon,LuExternalLink } from "react-icons/lu";
 import { AiOutlineSun } from "react-icons/ai";
 import { TbCircleDashedLetterW } from "react-icons/tb";
+import { PiLineVerticalBold } from "react-icons/pi";
 
-function NavBar({time,handleMusic,handleDark,darkMode,isPlaying}){
-    
-    
+function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation,handleLogoHover}){
+     
     return(
         <nav className="navbar">
            <div className="nav-left">
-                <div className="logo"> WADE/></div>
+                <div
+                 className={`logo ${triggerAnimation ? 'animate' : ''}`}
+                 onMouseEnter={handleLogoHover}
+                > C:\wa-dev\
+                </div>
                 <a href="#intro">Home</a>
                 <a href="" >LinkedIn <LuExternalLink size={12}/></a>
                 <a href="">Resume <LuExternalLink size={12}/></a>

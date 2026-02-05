@@ -9,6 +9,7 @@ function App() {
   const [minutes,setMinutes] = useState(0)
   const [seconds,setSeconds] = useState(0)
   const [isPlaying,setIsPlaying] = useState(false)
+  const [triggerAnimation, setTriggerAnimation] = useState(true)
   const [activeSection, setActiveSection] = useState('')
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first, default to dark mode if nothing saved
@@ -28,6 +29,13 @@ function App() {
       }
       audio.current.loop = true
   }
+
+  const handleLogoHover = () => {
+        console.log("HOVERR")
+        setTriggerAnimation(false) // Reset
+        setTimeout(() => setTriggerAnimation(true), 50) // Trigger again
+     }
+    
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode))
@@ -68,6 +76,8 @@ function App() {
         handleDark={handleDark} 
         isPlaying={isPlaying}
         darkMode={darkMode}
+        handleLogoHover={handleLogoHover}
+        triggerAnimation={triggerAnimation}
       />
       <div className="container">
         <SideBar activeSection={activeSection}/>
