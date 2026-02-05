@@ -8,8 +8,8 @@
   align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-color); /* Whatever your bg color is */
-  color: blueviolet ;
   border-style: dashed;
+  border-color: blueviolet;
 }
 
 .nav-left {
@@ -39,8 +39,8 @@
   width: 220px;
   height: 100vh;
   gap: 2rem; /* Space between items */
-  color: blue;
   border-style: dashed;
+  border-color: blue;
 }
 
 .sidebar .active {
@@ -54,7 +54,7 @@
   margin-top: 57px;
   flex-direction: column;
   flex: 1;
-  color: red;
+  border-color: red;
   gap: 1.5rem;
   border-style: dashed;
 }
@@ -65,6 +65,10 @@ section {
   scroll-margin-top: 60px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 .logo {
