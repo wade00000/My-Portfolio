@@ -30,7 +30,7 @@ function Content({setActiveSection}){
 <div className="content">
   <section ref={observer} id="intro">
     <img
-      src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif"
+      src="https://c.tenor.com/i802gAn6zIYAAAAC/tenor.gif"
       style={{ maxWidth: '500px' }}
     />
   </section>

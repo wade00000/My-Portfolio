@@ -8,7 +8,7 @@
   align-items: center;
   padding: 1rem 2rem;
   background: var(--bg-color);
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px); /* gives it the frosted glass look */
 
 }
 
@@ -108,6 +108,7 @@
   flex-direction: column;
   flex: 1;
   gap: 1.5rem;
+  padding-left: 250px;
 }
 
 section {
