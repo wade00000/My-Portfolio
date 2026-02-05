@@ -2,6 +2,7 @@ function SideBar({activeSection}){
     return(
         
         <div className="sidebar">
+            <h2>Sections</h2>
             <a href="#intro" className={activeSection === 'intro' ? 'active' : ''}>Introduction</a>
             <a href="#aboutme" className={activeSection === 'aboutme' ? 'active' : ''}>About Me</a>
             <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>

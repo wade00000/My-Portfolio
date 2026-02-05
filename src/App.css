@@ -7,7 +7,7 @@
   justify-content: space-between; /* Pushes left and right apart */
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--bg-color); /* Whatever your bg color is */
+  background: var(--bg-color);
   backdrop-filter: blur(10px); 
 
 }
@@ -16,6 +16,20 @@
   display: flex;
   align-items: center;
   gap: 2rem; /* Space between items */
+}
+
+.nav-left a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* space between text and icon */
+}
+
+.nav-left a svg {
+  transition: transform 0.2s ease;
+}
+
+.nav-left a:hover svg {
+  transform: translate(2.5px,-2.5px); /* moves up and diagonally */
 }
 
 .nav-right {
@@ -38,17 +52,55 @@
   left: 0;
   right: 0;
   flex-direction: column;
+  padding-top: 40px;
+  padding-left:20px ;
   width: 220px;
   height: 100vh;
   gap: 2rem; /* Space between items */
 
 }
 
-.sidebar .active {
-  color:grey;
-  font-weight: bold;
-
+.sidebar a {
+  display: block;
+  transition: all 0.3s ease;
+  max-width: 180px;
 }
+
+.sidebar a.active {
+  background-color: #333; /* dark gray for dark mode */
+  color: white;
+  font-weight: bold;
+  padding: 8px 8px; /* some padding around the text */
+  border-radius: 4px; /* rounded corners (optional) */
+  transition: all 0.3s ease; /* smooth transition */
+}
+
+.light .sidebar a.active {
+  background-color: #e5e5e5; /* light gray */
+  color: black;
+}
+
+/*.sidebar a {
+  position: relative;
+  padding-left: 12px; /* make room for the bar 
+}*/
+
+/* .sidebar a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+  transition: background 0.3s ease;
+} */
+
+/* .sidebar a.active::before {
+  background: purple;  or whatever color 
+} */
+
+
 .content {
   display: flex;
   margin-left: 188px;
@@ -84,9 +136,6 @@ a {
     color: inherit;
 }
 
-.sidebar a:hover{
- background-color: #d9d8d8;
-}
 
 
 .logo {

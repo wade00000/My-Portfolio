@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useRef } from "react"
 import { RxGithubLogo } from "react-icons/rx";
-import { LuMusic,LuMoon } from "react-icons/lu";
+import { LuMusic,LuMoon,LuExternalLink } from "react-icons/lu";
 import { AiOutlineSun } from "react-icons/ai";
 import { TbCircleDashedLetterW } from "react-icons/tb";
 
@@ -13,8 +13,8 @@ function NavBar({time,handleMusic,handleDark,darkMode,isPlaying}){
            <div className="nav-left">
                 <div className="logo"> WADE/></div>
                 <a href="#intro">Home</a>
-                <a href="https://www.linkedin.com/in/wade-namada-b1b629363/" target="_blank">LinkedIn</a>
-                <a href="">Resume</a>
+                <a href="https://www.linkedin.com/in/wade-namada-b1b629363/" target="_blank">LinkedIn <LuExternalLink size={12}/></a>
+                <a href="">Resume <LuExternalLink size={12}/></a>
            </div>
            
            <div className="nav-right">
