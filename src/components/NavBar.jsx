@@ -13,7 +13,7 @@ function NavBar({time,handleMusic,handleDark,darkMode,isPlaying}){
            <div className="nav-left">
                 <div className="logo"> WADE/></div>
                 <a href="#intro">Home</a>
-                <a href="https://www.linkedin.com/in/wade-namada-b1b629363/" target="_blank">LinkedIn <LuExternalLink size={12}/></a>
+                <a href="" >LinkedIn <LuExternalLink size={12}/></a>
                 <a href="">Resume <LuExternalLink size={12}/></a>
            </div>
            
