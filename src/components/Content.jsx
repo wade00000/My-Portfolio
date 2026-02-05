@@ -27,15 +27,57 @@ function Content({setActiveSection}){
 
     return(
         
-        <div className="content">
-            <section ref={observer} id="intro">Introduction</section>
-            <section ref={observer} id ="aboutme">About Me</section>
-            <section ref={observer} id ="projects">Projects</section>
-            <section ref={observer} id ="skills&tools">Skills & Tools</section>
-            <section ref={observer} id ="experience">Experience</section>
-            <section ref={observer} id ="education">Education</section>
-            <section ref={observer} id ="contact">Contact Me</section>
-        </div>
+<div className="content">
+  <section ref={observer} id="intro">
+    <img
+      src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="aboutme">
+    <img
+      src="https://c.tenor.com/KsvZ1G5XL1UAAAAd/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="projects">
+    <img
+      src="https://c.tenor.com/faf11erEYVIAAAAC/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="skills&tools">
+    <img
+      src="https://c.tenor.com/Jf1PRWBJ2f0AAAAd/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="experience">
+    <img
+      src="https://c.tenor.com/AWCoCHFc7D4AAAAC/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="education">
+    <img
+      src="https://c.tenor.com/be4PjQem2fgAAAAC/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+
+  <section ref={observer} id="contact">
+    <img
+      src="https://c.tenor.com/SETdjIBbTTcAAAAd/tenor.gif"
+      style={{ maxWidth: '500px' }}
+    />
+  </section>
+</div>
+
         
     )
 
