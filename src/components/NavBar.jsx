@@ -5,14 +5,14 @@ import { LuMusic,LuMoon } from "react-icons/lu";
 import { AiOutlineSun } from "react-icons/ai";
 import { TbCircleDashedLetterW } from "react-icons/tb";
 
-function NavBar({time,handleMusic,handleDark,darkMode}){
+function NavBar({time,handleMusic,handleDark,darkMode,isPlaying}){
     
     
     return(
         <nav className="navbar">
            <div className="nav-left">
                 <div className="logo"> WADE/></div>
-                <NavLink to="#intro" end>Home</NavLink>
+                <a href="#intro">Home</a>
                 <a href="https://www.linkedin.com/in/wade-namada-b1b629363/" target="_blank">LinkedIn</a>
                 <a href="">Resume</a>
            </div>
@@ -22,11 +22,11 @@ function NavBar({time,handleMusic,handleDark,darkMode}){
                     <RxGithubLogo size={18} />
                 </a>
 
-                <button className="music-button" onClick={handleMusic}>
+                <button className={isPlaying ? 'playing' : 'not-playing'} onClick={handleMusic} title="Play Music">
                   <LuMusic size={18}/>
                 </button>
 
-                <button className="theme-toggle" onClick={handleDark}>
+                <button className="theme-toggle" onClick={handleDark} title="Toggle Light/Dark">
                     {darkMode ? <AiOutlineSun size={18}/> : <LuMoon size={18}/>}
                 </button>
 

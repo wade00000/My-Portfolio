@@ -8,6 +8,7 @@ function App() {
   const [hours,setHours] = useState(0)
   const [minutes,setMinutes] = useState(0)
   const [seconds,setSeconds] = useState(0)
+  const [isPlaying,setIsPlaying] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const [darkMode, setDarkMode] = useState(() => {
     // Check localStorage first, default to dark mode if nothing saved
@@ -20,8 +21,10 @@ function App() {
   function handleMusic(){
       if(audio.current.paused){
           audio.current.play()
+          setIsPlaying(true)
       }else{
           audio.current.pause()
+          setIsPlaying(false)
       }
       audio.current.loop = true
   }
@@ -59,7 +62,13 @@ function App() {
   
   return (
     <div className={darkMode ? "dark" : "light"}>
-      <NavBar time={timeString} handleMusic={handleMusic} handleDark={handleDark} darkMode={darkMode}/>
+      <NavBar 
+        time={timeString} 
+        handleMusic={handleMusic} 
+        handleDark={handleDark} 
+        isPlaying={isPlaying}
+        darkMode={darkMode}
+      />
       <div className="container">
         <SideBar activeSection={activeSection}/>
         <Content setActiveSection={setActiveSection}/>

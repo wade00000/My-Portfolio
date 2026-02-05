@@ -23,6 +23,8 @@
   align-items: center;
   gap: 1.5rem;
 }
+
+
 .container {
   display: flex;
   padding:  0rem 2rem;
@@ -67,7 +69,14 @@ padding: 0;
 border: none;
 background: none;
 color: inherit;
+}
 
+.music-button:not(:active){
+  color: inherit;
+}
+
+.playing{
+  color:rgb(154, 16, 154);
 }
 
 a {
@@ -103,6 +112,22 @@ a {
 
 .light .navbar {
   border-bottom: 1px solid #ddd; 
+}
+
+.dark .nav-left a{
+  color: #9f9fa9;
+}
+
+.dark .nav-left a:hover{
+  color: white;
+}
+
+.light .nav-left a{
+  color: #71717b;
+} 
+
+.light .nav-left a:hover{
+  color: black;
 }
 .dark .sidebar {
   border-right: 1px solid #444; 
