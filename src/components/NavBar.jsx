@@ -33,8 +33,7 @@ function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation
                 <button id="right" className="theme-toggle" onClick={handleDark} title="Toggle Light/Dark">
                     {darkMode ? <AiOutlineSun size={18}/> : <LuMoon size={18}/>}
                 </button>
-
-                {time}
+                <span className="time">{time}</span>
            </div>
         </nav>
     )       

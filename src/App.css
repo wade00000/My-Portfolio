@@ -91,7 +91,7 @@
 
 .sidebar a.active {
   background-color: #333; /* dark gray for dark mode */
-  color: white;
+  color:rgb(154, 16, 154);
   font-weight: bold;
 
   padding: 8px 8px; /* some padding around the text */
@@ -101,7 +101,7 @@
 
 .light .sidebar a.active {
   background-color: #e5e5e5; /* light gray */
-  color: black;
+  color:rgb(154, 16, 154);
 }
 
 /*.sidebar a {
@@ -149,6 +149,10 @@ background: none;
 color: inherit;
 }
 
+.time{
+  width:60px;
+}
+
 .music-button:not(:active){
   color: inherit;
 }
@@ -167,9 +171,8 @@ a {
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  font-family: monospace;
 
-  width: 110px;                /* reserve space immediately */
+  width: 125px;                /* reserve space immediately */
   white-space: nowrap;
   overflow: hidden;
 
@@ -242,7 +245,7 @@ a {
 }
 
 .dark .nav-left a:hover{
-  color: white;
+  color:rgb(154, 16, 154);
 }
 
 .light .nav-left a{
@@ -250,7 +253,7 @@ a {
 } 
 
 .light .nav-left a:hover{
-  color: black;
+  color:rgb(154, 16, 154);
 }
 .dark .sidebar {
   border-right: 1px solid #444; 

@@ -29,10 +29,13 @@ function Content({setActiveSection}){
         
 <div className="content">
   <section ref={observer} id="intro">
-    <img
+    {/* <img
       src="https://c.tenor.com/i802gAn6zIYAAAAC/tenor.gif"
       style={{ maxWidth: '500px' }}
-    />
+    /> */}
+    <h1>Wade Namada</h1>
+    <h2>Solving problems one line of code at a time</h2>
+    <p> Passionate about code</p>
   </section>
 
   <section ref={observer} id="aboutme">

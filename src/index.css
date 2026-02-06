@@ -13,10 +13,18 @@ html {
   --text-color: #000000;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-color);
+/* Monospace for structural/UI elements */
+.logo, .navbar, .sidebar {
+  font-family: 'Space Mono', monospace;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', sans-serif; /* or whatever you pick */
+}
+
+/* Clean sans-serif for body content */
+body, p, section {
+  font-family: 'Work Sans', sans-serif;
 }
 
 .dark-mode {
