@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   position: fixed;
-  top: 0;
+  height: 57px;
 
+  top: 0;
   left: 0;
   right: 0;
   justify-content: space-between; /* Pushes left and right apart */
@@ -37,9 +38,26 @@
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.4rem;
 }
 
+.nav-right #right {
+  width: 36px;  /* Fixed width */
+  height: 36px;
+  padding: 9px; /* Always have padding */
+  border-radius: 50%; /* Perfect circle (use 50% not 60px) */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.dark .nav-right #right:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.light .nav-right #right:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.05);
+}
 
 .container {
   display: flex;
@@ -156,7 +174,8 @@ a {
   overflow: hidden;
 
   border-right: 5px solid currentColor;
-  padding-right: 2px;
+  padding-right: 7rem;
+
 
   /* start hidden */
   clip-path: inset(0 100% 0 0); /* basically clips/hides everything from the right */
@@ -166,12 +185,12 @@ a {
 .logo.animate {
   animation:
     typing 1.2s steps(11) forwards,
-    blink .7s step-end 2s infinite;
+    blink .6s step-end 0.2s infinite; /* Blink cursor every 0.7s, start after 2s delay, run forever */
 }
 
 /* idle cursor blink */
 .logo:not(.animate) {
-  animation: blink .7s step-end infinite;
+  animation: blink .6s step-end infinite;
 }
 
 /* reveal text without changing layout */

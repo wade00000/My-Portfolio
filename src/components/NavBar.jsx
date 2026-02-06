@@ -22,19 +22,19 @@ function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation
            </div>
            
            <div className="nav-right">
-                <a href="https://github.com/wade00000" target="_blank">
+                <a id="right" href="https://github.com/wade00000" target="_blank" title="Github">
                     <RxGithubLogo size={18} />
                 </a>
 
-                <button className={isPlaying ? 'playing' : 'not-playing'} onClick={handleMusic} title="Play Music">
+                <button id="right" className={isPlaying ? 'playing' : ''} onClick={handleMusic} title="Play Music">
                   <LuMusic size={18}/>
                 </button>
 
-                <button className="theme-toggle" onClick={handleDark} title="Toggle Light/Dark">
+                <button id="right" className="theme-toggle" onClick={handleDark} title="Toggle Light/Dark">
                     {darkMode ? <AiOutlineSun size={18}/> : <LuMoon size={18}/>}
                 </button>
 
-                {time} {/* This is your dark mode toggle I assume? */}
+                {time}
            </div>
         </nav>
     )       

@@ -31,7 +31,6 @@ function App() {
   }
 
   const handleLogoHover = () => {
-        console.log("HOVERR")
         setTriggerAnimation(false) // Reset
         setTimeout(() => setTriggerAnimation(true), 50) // Trigger again
      }
