@@ -133,13 +133,15 @@
   flex-direction: column;
   flex: 1;
   gap: 1.5rem;
-  padding-left: 250px;
+  padding-left: 30px
 }
 
 section {
   margin-top:55px ;
   height: 100vh;
   scroll-margin-top: 60px;
+  padding-left: 15px;
+  padding-top:20px;
 }
 
 button{
@@ -261,4 +263,11 @@ a {
 
 .light .sidebar {
   border-right: 1px solid #ddd; 
+}
+
+.dark .grey{
+  color:#9f9fa9;
+}
+.light .grey{
+  color:#71717b;
 }

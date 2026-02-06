@@ -24,7 +24,10 @@ h1, h2, h3 {
 
 /* Clean sans-serif for body content */
 body, p, section {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
+}
+p{
+  font-size:20px;
 }
 
 .dark-mode {
