@@ -79,7 +79,7 @@
   width: 220px;
 
   height: 100vh;
-  gap: 2rem; /* Space between items */
+  gap: 1rem; /* Space between items */
 
 }
 
@@ -140,7 +140,7 @@ section {
   height: 100vh;
   scroll-margin-top: 60px;
   padding-left: 15px;
-  padding-top:20px;
+  padding-top:33px;
 }
 
 button{
