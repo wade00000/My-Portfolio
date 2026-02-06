@@ -30,7 +30,7 @@ return(
 <div className="content">
   <section ref={observer} id="intro">
     <h1>Wade Namada — Developer & Problem Solver</h1>
-    <h1 className="grey">Solving problems one line of code at a time</h1>
+    <h1 className="grey">Solving real life problems,one line of code at a time</h1>
   </section>
 
   <section ref={observer} id="aboutme">
