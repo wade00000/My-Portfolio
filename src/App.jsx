@@ -18,7 +18,7 @@ function App() {
   })
 
   const audio = useRef( new Audio("/senseixjay.mp3"))
-  audio.current.volume = 0.15
+  
 
   function handleMusic(){
       if(audio.current.paused){
@@ -28,7 +28,9 @@ function App() {
           audio.current.pause()
           setIsPlaying(false)
       }
+      audio.current.volume = 0.15
       audio.current.loop = true
+
   }
 
   const handleLogoHover = () => {

@@ -1,4 +1,5 @@
 import { useEffect, useState,useRef } from 'react'
+import Card from './Card'
 
 
 function Content({setActiveSection}){
@@ -44,6 +45,33 @@ return(
   <section ref={observer} id="projects">
     <h1>My Projects</h1>
     <h1 className="grey">Things I’ve Built to Learn and Solve Problems</h1>
+    <div className="projects-grid">
+      <Card 
+        title="Spotify Analytics"
+        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
+        techStack={['React', 'Spotify API', 'Chart.js']}
+        link="/projects/spotify-analytics"
+      />
+      <Card 
+        title="Spotify Analytics"
+        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
+        techStack={['React', 'Spotify API', 'Chart.js']}
+        link="/projects/spotify-analytics"
+      />
+      <Card 
+        title="Spotify Analytics"
+        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
+        techStack={['React', 'Spotify API', 'Chart.js']}
+        link="/projects/spotify-analytics"
+      />
+      <Card 
+        title="Spotify Analytics"
+        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
+        techStack={['React', 'Spotify API', 'Chart.js']}
+        link="/projects/spotify-analytics"
+      />
+      
+    </div>
   </section>
 
   <section ref={observer} id="skills&tools">
