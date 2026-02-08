@@ -12,9 +12,33 @@ const routes = [
         element:  <Content/>
       },
       {
+        path: "about" ,
+        element:  <Content/>
+      },
+      {
+        path: "projects", 
+        element:  <Content/>,
+      },
+      {
+        path: "skills", 
+        element:  <Content/>
+      },
+      {
+        path: "experience", 
+        element:  <Content/>
+      },
+      {
+        path: "education", 
+        element:  <Content/>
+      },
+      {
+        path: "contact",
+        element: <Content/>
+      },
+      {
         path: "projects/spotify-analytics",
-        element: <SpotifyProject />
-      }
+        element: <SpotifyProject/>
+      },
     ]
   }
 ]

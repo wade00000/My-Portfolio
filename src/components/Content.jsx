@@ -1,35 +1,57 @@
 import { useEffect, useState,useRef } from 'react'
 import Card from './Card'
 import { useOutletContext } from "react-router"
+import { useLocation } from "react-router";
 
 
 function Content(){
   const {setActiveSection} = useOutletContext()
+  const location = useLocation()
+  const observerRef = useRef(null)
 
-    const observerRef = useRef(null)
+  const routeToSection = {
+  "/": "intro",
+  "/about": "aboutme",
+  "/projects": "projects",
+  "/skills": "skills-tools",
+  "/experience": "experience",
+  "/education": "education",
+  "/contact": "contact",
+  };
 
-  
 
-    useEffect(() => {
-        observerRef.current = new IntersectionObserver((entries)=>{
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                    setActiveSection(entry.target.id)
-                }
-        })
-        },{
+  useEffect(()=>{
+    const sectionId = routeToSection[location.pathname]
+    if(!sectionId) return
+
+    const el = document.getElementById(sectionId)
+
+    if(el){
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  },[location.pathname])
+
+
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+          if(entry.isIntersecting){
+            setActiveSection(entry.target.id)
+          }
+      })},{
             threshold: 0.5
         })
 
         return () => observerRef.current.disconnect()
       
-    }, [])
+  }, [])
 
-    const observer = el => {
-        if (el && observerRef.current){
-            observerRef.current.observe(el)
-        }
-    }
+  const observer = el => {
+     if (el && observerRef.current){
+       observerRef.current.observe(el)
+     }
+  }
 
 return(
         
@@ -52,7 +74,7 @@ return(
         title="Project Name"
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
-        link="projects/spotify-analytics"
+        link="/projects/spotify-analytics"
       />
       <Card 
         title="Project Name"
@@ -75,7 +97,7 @@ return(
     </div>
   </section>
 
-  <section ref={observer} id="skills&tools">
+  <section ref={observer} id="skills-tools">
     <h1>Skills</h1>
     <h1 className="grey">Technologies and Tools I Work With</h1>
   </section>

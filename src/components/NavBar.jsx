@@ -16,7 +16,7 @@ function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation
                  onMouseEnter={handleLogoHover}
                 > C:\wa-dev\
                 </div>
-                <a href="#intro">Home</a>
+                <a href="/">Home</a>
                 <a href="" >LinkedIn <LuExternalLink size={12}/></a>
                 <a href="">Resume <LuExternalLink size={12}/></a>
            </div>
