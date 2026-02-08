@@ -15,7 +15,7 @@ function SideBar({ activeSection }) {
       <h2>Sections</h2>
 
       <Link 
-        to="/" 
+        to="/intro" 
         className={activeSection === "intro" ? "active" : ""}
         onClick={() => handleSectionClick('intro')}
       >

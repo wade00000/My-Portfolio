@@ -12,6 +12,10 @@ const routes = [
         element:  <Content/>
       },
       {
+        path: "intro",
+        element:  <Content/>
+      },
+      {
         path: "about" ,
         element:  <Content/>
       },

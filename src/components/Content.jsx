@@ -25,7 +25,7 @@ function Content(){
   };
 
   const sectionToRoute = {
-    "intro": "/",
+    "intro": "/intro",
     "aboutme": "/about",
     "projects": "/projects",
     "skills-tools": "/skills",
