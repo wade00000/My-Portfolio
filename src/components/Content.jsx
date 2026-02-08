@@ -1,15 +1,18 @@
 import { useEffect, useState,useRef } from 'react'
 
+
 function Content({setActiveSection}){
 
     const observerRef = useRef(null)
+
+  
 
     useEffect(() => {
         observerRef.current = new IntersectionObserver((entries)=>{
             entries.forEach(entry => {
                 if(entry.isIntersecting){
                     setActiveSection(entry.target.id)
-                } 
+                }
         })
         },{
             threshold: 0.5
@@ -34,12 +37,12 @@ return(
   </section>
 
   <section ref={observer} id="aboutme">
-    <h1>About</h1>
+    <h1 className="show">About</h1>
     <h1 className="grey">Who I Am and How I Think About Code</h1>
   </section>
 
   <section ref={observer} id="projects">
-    <h1>Projects</h1>
+    <h1>My Projects</h1>
     <h1 className="grey">Things I’ve Built to Learn and Solve Problems</h1>
   </section>
 

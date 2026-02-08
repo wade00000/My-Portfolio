@@ -143,6 +143,7 @@ section {
   padding-top:33px;
 }
 
+
 button{
 padding: 0;
 border: none;
@@ -212,7 +213,7 @@ a {
 /* Typing animation - expands width to reveal text character by character */
 @keyframes typing {
   from { clip-path: inset(0 100% 0 0) } /* Start completely hidden */
-  to { clip-path: inset(0 0 0 0)} /* End fully visible ( I adjusted based on actual text width) */
+  to { clip-path: inset(0 0 0 0)} /* End fully visible (adjusted based on actual text width) */
 }
 
 /* Cursor blinking animation - toggles border visibility */
@@ -267,6 +268,28 @@ a {
 .dark .grey{
   color:#9f9fa9;
 }
+
 .light .grey{
   color:#71717b;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-color: aqua;
+  border-style: dashed;
+  transition: 300ms;
+  height: 120px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.image {
+  width: 10%;
 }
