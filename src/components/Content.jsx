@@ -1,6 +1,6 @@
 import { useEffect, useState,useRef } from 'react'
 import Card from './Card'
-import { useOutletContext } from "react-router"
+import { useNavigate, useOutletContext } from "react-router"
 import { useLocation } from "react-router";
 
 
@@ -8,6 +8,8 @@ function Content(){
   const {setActiveSection} = useOutletContext()
   const location = useLocation()
   const observerRef = useRef(null)
+  const isScrollingRef = useRef(false)
+  const navigate = useNavigate()
 
   const routeToSection = {
   "/": "intro",
@@ -19,8 +21,23 @@ function Content(){
   "/contact": "contact",
   };
 
+  const sectionToRoute = {
+    "intro": "/",
+    "aboutme": "/about",
+    "projects": "/projects",
+    "skills-tools": "/skills",
+    "experience": "/experience",
+    "education": "/education",
+    "contact": "/contact"
+  }
+
 
   useEffect(()=>{
+    if(isScrollingRef.current){
+      isScrollingRef.current = false
+      return
+    }
+
     const sectionId = routeToSection[location.pathname]
     if(!sectionId) return
 
@@ -37,8 +54,15 @@ function Content(){
     observerRef.current = new IntersectionObserver((entries)=>{
       entries.forEach(entry => {
           if(entry.isIntersecting){
-            setActiveSection(entry.target.id)
-          }
+            const sectionId = entry.target.id
+            setActiveSection(sectionId)
+          
+
+          const route = sectionToRoute[sectionId]
+          if(route && location.pathname !== route){
+            isScrollingRef.current = true
+            navigate(route,{replace : true}) // replace : true doesnt add to browser history preventing a trigger of scroll logic
+          }}
       })},{
             threshold: 0.5
         })
