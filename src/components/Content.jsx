@@ -7,9 +7,12 @@ import { useLocation } from "react-router";
 function Content(){
   const {setActiveSection} = useOutletContext()
   const location = useLocation()
+  const navigate = useNavigate()
+
   const observerRef = useRef(null)
   const isScrollingRef = useRef(false)
-  const navigate = useNavigate()
+  const hasInitialScrolled = useRef(false)
+  
 
   const routeToSection = {
   "/": "intro",
@@ -45,6 +48,7 @@ function Content(){
 
     if(el){
       el.scrollIntoView({ behavior: "smooth" });
+      hasInitialScrolled.current = true // Mark that initial scroll happened
     }
   },[location.pathname])
 
@@ -59,8 +63,10 @@ function Content(){
           
 
           const route = sectionToRoute[sectionId]
-          if(route && location.pathname !== route){
-            isScrollingRef.current = true
+          
+          // Only update URL if we've done the initial scroll
+          if(hasInitialScrolled.current && route && location.pathname !== route){
+            isScrollingRef.current = true //prevents the auto scroll effect from runnin when someone uses manual scroll
             navigate(route,{replace : true}) // replace : true doesnt add to browser history preventing a trigger of scroll logic
           }}
       })},{
