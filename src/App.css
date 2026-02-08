@@ -297,7 +297,7 @@ a {
   text-decoration: none;
   color: inherit;
   display: block; /* Make sure it's block */
-  
+
   max-width: 100%; /* Don't exceed grid cell */
   box-shadow: 0 4px 8px 0 rgba(154, 16, 154, 0.2);
 }
@@ -339,7 +339,14 @@ a {
   font-size: 0.85rem;
   padding: 4px 12px;
   background: rgba(154, 16, 154, 0.1);
+  transition: all 0.3s ease;
+
   border: 1px solid rgba(154, 16, 154, 0.3);
   border-radius: 12px;
   color: rgb(154, 16, 154);
+  box-shadow: 0 4px 8px 0 rgba(154, 16, 154, 0.2);
+}
+
+.tech-tag:hover {
+  box-shadow: 0 8px 16px 0 rgba(154, 16, 154, 0.2);
 }

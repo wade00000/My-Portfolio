@@ -2,7 +2,7 @@ import { useEffect, useState,useRef } from 'react'
 import './App.css'
 import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
-import Content from './components/Content'
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [hours,setHours] = useState(0)
@@ -83,9 +83,10 @@ function App() {
       />
       <div className="container">
         <SideBar activeSection={activeSection}/>
-        <Content 
-          setActiveSection={setActiveSection}  
-          activeSection={activeSection} 
+        <Outlet 
+          context={{
+            setActiveSection
+          }}
         />
         
       </div>

@@ -1,21 +1,22 @@
-import App from "./App";
+import App from './App'
+import Content from './components/Content'
+import SpotifyProject from "./projects/SpotifyProject"
+
 const routes = [
   {
     path: "/",
-    element: <LandingPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/app",
-    element: <App />,
+    element: <App />, // parent
     children: [
       {
-        index: true,
-        element: <Home />,
+        index: true, // renders at "/"
+        element:  <Content/>
       },
-    ],
-  },
-];
+      {
+        path: "projects/spotify-analytics",
+        element: <SpotifyProject />
+      }
+    ]
+  }
+]
 
-
-export default routes;
+export default routes

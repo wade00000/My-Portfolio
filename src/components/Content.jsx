@@ -1,8 +1,10 @@
 import { useEffect, useState,useRef } from 'react'
 import Card from './Card'
+import { useOutletContext } from "react-router"
 
 
-function Content({setActiveSection}){
+function Content(){
+  const {setActiveSection} = useOutletContext()
 
     const observerRef = useRef(null)
 
@@ -50,7 +52,7 @@ return(
         title="Project Name"
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
-        link=""
+        link="projects/spotify-analytics"
       />
       <Card 
         title="Project Name"
