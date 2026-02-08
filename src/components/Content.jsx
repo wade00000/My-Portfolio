@@ -47,30 +47,29 @@ return(
     <h1 className="grey">Things I’ve Built to Learn and Solve Problems</h1>
     <div className="projects-grid">
       <Card 
-        title="Spotify Analytics"
-        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
-        techStack={['React', 'Spotify API', 'Chart.js']}
-        link="/projects/spotify-analytics"
+        title="Project Name"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
       />
       <Card 
-        title="Spotify Analytics"
-        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
-        techStack={['React', 'Spotify API', 'Chart.js']}
-        link="/projects/spotify-analytics"
+        title="Project Name"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
       />
       <Card 
-        title="Spotify Analytics"
-        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
-        techStack={['React', 'Spotify API', 'Chart.js']}
-        link="/projects/spotify-analytics"
+        title="Project Name"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
       />
       <Card 
-        title="Spotify Analytics"
-        image="https://i.pinimg.com/736x/f5/3c/6c/f53c6ce6f793a1e5af96dddaccb5eb14.jpg"
-        techStack={['React', 'Spotify API', 'Chart.js']}
-        link="/projects/spotify-analytics"
+        title="Project Name"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
       />
-      
     </div>
   </section>
 
