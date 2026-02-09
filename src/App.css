@@ -275,13 +275,20 @@ a {
   border-right: 1px solid #ddd; 
 }
 
-.dark .grey{
+.dark .grey,.back-button{
   color:#9f9fa9;
 }
 
-.light .grey{
+.light .grey,.back-button{
   color:#71717b;
 }
+
+.back-button{
+  display: flex;
+  padding-bottom: 20px;
+  gap: 0.5rem;
+}
+
 
 
 
@@ -312,6 +319,7 @@ a {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  object-position: left;
 }
 
 .project-card-info {

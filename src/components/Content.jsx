@@ -101,12 +101,24 @@ return(
     <h1 className="grey">Things I’ve Built to Learn and Solve Problems</h1>
     <div className="projects-grid">
       <Card 
-        title="Project Name"
-        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        title="SpotifyMe - Spotify Music Analytics"
+        image="./spotify.png"
         techStack={['Tech', 'Tech', 'Tech']}
         link="/projects/spotify-analytics"
       />
       <Card 
+        title="Portfolio | Wade Namada"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
+      />
+      <Card 
+        title="Project Name"
+        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
+        techStack={['Tech', 'Tech', 'Tech']}
+        link=""
+      />
+      {/* <Card 
         title="Project Name"
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
@@ -123,7 +135,7 @@ return(
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
         link=""
-      />
+      /> */}
     </div>
   </section>
 

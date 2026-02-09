@@ -1,6 +1,7 @@
 import "../App.css"
 import { Link } from "react-router"
 import { useEffect } from "react"
+import { LuArrowLeft } from "react-icons/lu";
 
 export default function SpotifyProject(){
     useEffect(() => {
@@ -11,7 +12,7 @@ export default function SpotifyProject(){
         <div className="content">
             <section>
                 {/* <button onClick={()=>navigate('/projects')}>← Back to Projects</button> */}
-                <Link to="/projects" className="back-button">← Back to Projects</Link>
+                <Link to="/projects" className="back-button"><LuArrowLeft size={18}/> Back to Projects</Link>
                 <h1>Hello this is my Project</h1>
             </section>
         </div>
