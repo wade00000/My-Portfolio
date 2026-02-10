@@ -141,7 +141,7 @@
   margin-top: 57px;
 
   flex-direction: column;
-  flex: 1;
+  flex: 1 1 auto;
   gap: 1.5rem;
   padding-left: 30px
 }
@@ -358,3 +358,17 @@ a {
 .tech-tag:hover {
   box-shadow: 0 8px 16px 0 rgba(154, 16, 154, 0.2);
 }
+
+@media (max-width: 600px){
+ .content{
+  margin-left:0
+ }
+ .sidebar{
+  display: none;
+}
+
+
+}  
+
+
+/* <600px, 601px, 768px, 992px, 1200px */
