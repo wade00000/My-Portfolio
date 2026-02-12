@@ -450,8 +450,13 @@ a {
 }
 
 @media(max-width:600px){
-  section h1 {
-    font-size: clamp(1.25rem, 5vw, 1.75rem); 
+  .content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  section {
+    padding-left: 0;
   }
 
   .hamburger{
