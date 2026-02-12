@@ -5,12 +5,12 @@ import { LuMusic,LuMoon,LuExternalLink } from "react-icons/lu";
 import { AiOutlineSun } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation,handleLogoHover}){
+function NavBar({time,handleMusic,handleDark,darkMode,isPlaying,triggerAnimation,handleLogoHover,setMenuOpen,menuOpen}){
      
     return(
         <nav className="navbar">
            <div className="nav-left">
-                 <button className="hamburger" id="hamburger">
+                 <button className="hamburger" id="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                    <GiHamburgerMenu size={18} />
                 </button>
                 <div
