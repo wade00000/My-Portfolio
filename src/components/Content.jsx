@@ -71,7 +71,7 @@ function Content(){
             navigate(route,{replace : true}) // replace : true doesnt add to browser history preventing a trigger of scroll logic
           }}
       })},{
-            threshold: 0.5
+            threshold: 0.6
         })
 
         return () => observerRef.current.disconnect()
@@ -90,9 +90,8 @@ return(
   <section ref={observer} id="intro">
     <h1>Wade Namada — Developer & Problem Solver</h1>
     <h1 className="grey">Solving real life problems,one line of code at a time</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <p>Currently focused on full-stack development and creating tools that make complex data accessible.</p>
+    
   </section>
 
   <section ref={observer} id="aboutme">

@@ -28,7 +28,7 @@ html.dark-mode{
 
   --color-secondary:#9f9fa9;
   --border-color: #666 ;
-  --accent-color:rgb(154, 16, 154);;
+  --accent-color:rgb(180,50,180);;
 
 }
 
@@ -51,9 +51,6 @@ body, p, section {
   font-family: 'Geist', sans-serif;
 }
 
-p{
-  font-size:20px;
-}
 
 
 

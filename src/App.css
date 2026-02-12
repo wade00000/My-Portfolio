@@ -177,6 +177,21 @@ section {
   scroll-margin-top: 60px;
   padding-left: 15px;
   padding-top:33px;
+  gap:100px;
+}
+
+section h1 {
+  margin-bottom: 0.3rem; /* Small gap between h1 headings */
+  font-size: 39.6px;
+}
+
+section h1 + h1 {
+  margin-bottom: 1.5rem; /* Larger gap after second heading (before paragraphs) */
+}
+
+p{
+  font-size: 19.8px;
+  font-weight: 200;
 }
 
 
@@ -425,16 +440,20 @@ a {
   }
 
   /* Typography */
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
   p {
-    font-size: 1rem;
+    font-size: 16px; /* Smaller on mobile */
+  }
+  
+  h1 {
+    font-size: 1.75rem; /* ~28px */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* ~24px */
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* ~20px */
   }
 }
 
@@ -469,8 +488,12 @@ a {
     height: 28px;
   }
 
+  p {
+    font-size: 14px; /* Even smaller on small phones */
+  }
+  
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .content {
