@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
 import { Outlet } from 'react-router-dom';
 import { Link } from "react-router";
+import { IoMdClose } from "react-icons/io";
 
 function App() {
   const [hours,setHours] = useState(0)
@@ -47,6 +48,16 @@ function App() {
     }
   }
 
+
+  useEffect(() => {
+  const root = document.documentElement
+
+  if (darkMode) {
+    root.classList.add("dark-mode")
+  } else {
+    root.classList.remove("dark-mode")
+  }
+}, [darkMode])
     
 
   useEffect(() => {
@@ -81,7 +92,7 @@ function App() {
   
   
   return (
-    <div className={darkMode ? "dark" : "light"}>
+    <div>
       <NavBar 
         time={timeString} 
         handleMusic={handleMusic} 
@@ -95,6 +106,9 @@ function App() {
       />
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <span onClick={()=> setMenuOpen(!menuOpen)}>
+          <IoMdClose size={24} />
+        </span>
         <h2>SECTIONS</h2>
         <Link to="/intro" onClick={() => handleSectionClick('intro')}>
           Introduction

@@ -6,11 +6,30 @@
 }
 
 html {
+  color-scheme: light; /* prevents device override */
   scroll-behavior: smooth;
 }
+
 :root {
-  --bg-dark: #ffffff;
-  --text-color: #000000;
+  --bg-main: #f0f0f0;
+  --text-primary: #000;
+  --el-highlight:#e5e5e5;
+  
+  --color-secondary:#71717b;
+  --border-color: #b0b0b0 ;
+  --accent-color:rgb(154, 16, 154);;
+}
+
+html.dark-mode{
+  color-scheme: dark;
+  --bg-main: #000;
+  --text-primary: #fff;
+  --el-highlight:#333;
+
+  --color-secondary:#9f9fa9;
+  --border-color: #666 ;
+  --accent-color:rgb(154, 16, 154);;
+
 }
 
 /* Monospace for structural/UI elements */
@@ -22,16 +41,19 @@ h1, h2, h3,.back-button {
   font-family: 'Outfit', sans-serif; 
 }
 
+body{
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
 /* Clean sans-serif for body content */
 body, p, section {
   font-family: 'Geist', sans-serif;
 }
+
 p{
   font-size:20px;
 }
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
+
 
