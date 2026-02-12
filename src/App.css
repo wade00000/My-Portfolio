@@ -427,8 +427,8 @@ a {
 
   .content {
     margin-left: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0rem;
+    padding-right:0
   }
 
   /* Sections */
@@ -451,8 +451,8 @@ a {
 
 @media(max-width:600px){
   .content {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   
   section {
@@ -491,8 +491,8 @@ a {
 
 
   .content {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
