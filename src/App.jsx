@@ -95,6 +95,7 @@ function App() {
       />
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <h2>SECTIONS</h2>
         <Link to="/intro" onClick={() => handleSectionClick('intro')}>
           Introduction
         </Link>
@@ -123,7 +124,7 @@ function App() {
           Contact Me
         </Link>
       </div>
-      
+
       <div className="container">
         <SideBar activeSection={activeSection} handleSectionClick={handleSectionClick}/>
         <Outlet 
