@@ -76,7 +76,7 @@ function Content(){
 
         return () => observerRef.current.disconnect()
       
-  }, [location.pathname])
+  }, [location.pathname,navigate])
 
   const observer = el => {
      if (el && observerRef.current){

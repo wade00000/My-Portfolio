@@ -16,6 +16,10 @@
 
 }
 
+.hamburger{
+  display: none;
+}
+
 .nav-left {
   display: flex;
   align-items: center;
@@ -359,16 +363,121 @@ a {
   box-shadow: 0 8px 16px 0 rgba(154, 16, 154, 0.2);
 }
 
-@media (max-width: 600px){
- .content{
-  margin-left:0
- }
- .sidebar{
-  display: none;
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-left {
+    gap: 1rem;
+  }
+
+  .nav-left a {
+    font-size: 0.875rem;
+  }
+
+
+
+  .logo {
+    font-size: 1rem;
+    width: 100px;
+  }
+
+  .nav-right {
+    gap: 0.5rem;
+  }
+
+  .nav-right .right {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+  }
+
+  .time {
+    font-size: 0.75rem;
+    width: 50px;
+  }
+
+  /* Hide sidebar, adjust content */
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Sections */
+  section {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  /* Project cards - stack vertically */
+  .projects-grid {
+    grid-template-columns: 1fr; /* One column */
+    gap: 20px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
 
+@media(max-width:600px){
+  .hamburger{
+    display: block;
+    padding-left: 10px;
+  }
+  .logo{
+    display: none;
+  }
 
-}  
+  .nav-left a{
+    display: none;
+  }
+
+ 
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  
+
+  .nav-right .right {
+    width: 28px;
+    height: 28px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 
 
 /* <600px, 601px, 768px, 992px, 1200px */
