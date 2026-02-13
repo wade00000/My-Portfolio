@@ -62,13 +62,13 @@ function SideBar({ activeSection }) {
         Education
       </Link>
 
-      <Link 
+      {/* <Link 
         to="/contact" 
         className={activeSection === "contact" ? "active" : ""}
         onClick={() => handleSectionClick('contact')}
       >
         Contact Me
-      </Link>
+      </Link> */}
     </div>
   );
 }

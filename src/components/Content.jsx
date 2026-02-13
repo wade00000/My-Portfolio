@@ -3,6 +3,7 @@ import Card from './Card'
 import { useNavigate, useOutletContext } from "react-router"
 import { useLocation } from "react-router";
 import StackIcon from "tech-stack-icons";
+import { GiGraduateCap } from "react-icons/gi";
 
 
 function Content(){
@@ -86,7 +87,8 @@ function Content(){
             navigate(route,{replace : true}) // replace : true doesnt add to browser history preventing a trigger of scroll logic
           }}
       })},{
-            threshold: 0.6
+            threshold: 0.5,
+            rootMargin: "-20% 0px -20% 0px"
         })
 
         return () => observerRef.current.disconnect()
@@ -146,22 +148,22 @@ return(
       <Card 
         title="SpotifyMe - Spotify Music Analytics"
         image="./spotify.png"
-        techStack={['Tech', 'Tech', 'Tech']}
+        techStack={['SpotifyAPI', 'React', 'CSS']}
         link="/projects/spotify-analytics"
       />
       <Card 
         title="Portfolio | Wade Namada"
-        image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
-        techStack={['Tech', 'Tech', 'Tech']}
-        link=""
+        image="./portfolio2.png"
+        techStack={['React', 'CSS']}
+        link="/projects/my-portfolio"
       />
-      <Card 
+      {/*<Card 
         title="Project Name"
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
         link=""
       />
-      {/* <Card 
+       <Card 
         title="Project Name"
         image="https://i.pinimg.com/736x/82/a3/3a/82a33a43be59e913b58efbdfd64e281e.jpg"
         techStack={['Tech', 'Tech', 'Tech']}
@@ -212,10 +214,10 @@ return(
     <h1 className="grey">How I’ve Built My Foundations</h1>
   </section>
 
-  <section ref={observer} id="contact">
+  {/* <section ref={observer} id="contact">
     <h1>Contact Me</h1>
     <h1 className="grey">Let’s Connect or Build Something Together</h1>
-  </section>
+  </section> */}
 
   {/* Image sources kept for future use:
     https://c.tenor.com/i802gAn6zIYAAAAC/tenor.gif

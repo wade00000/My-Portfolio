@@ -1,6 +1,7 @@
 import App from './App'
 import Content from './components/Content'
 import SpotifyProject from "./projects/SpotifyProject"
+import Portfolio from "./projects/Portfolio"
 
 const routes = [
   {
@@ -42,6 +43,10 @@ const routes = [
       {
         path: "projects/spotify-analytics",
         element: <SpotifyProject/>
+      },
+      {
+        path: "projects/my-portfolio",
+        element: <Portfolio/>
       },
     ]
   }

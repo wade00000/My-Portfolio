@@ -428,6 +428,15 @@ a {
 
 
 
+/* provides a step like visual
+.timeline-event:nth-child(even) .timeline-content {
+  margin-left: 40px;   push content to the other side 
+}
+.timeline-event:nth-child(odd) .timeline-content {
+  margin-left: 0;
+} */
+
+
 @media (max-width: 768px) {
   /* Navbar adjustments */
   .navbar {
