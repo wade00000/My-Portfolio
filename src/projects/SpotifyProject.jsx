@@ -11,7 +11,6 @@ export default function SpotifyProject(){
     return(
         <div className="content">
             <section>
-                {/* <button onClick={()=>navigate('/projects')}>← Back to Projects</button> */}
                 <Link to="/projects" className="back-button"><LuArrowLeft size={18}/> Back to Projects</Link>
                 <h1>Hello this is my Project</h1>
             </section>

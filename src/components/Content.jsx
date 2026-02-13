@@ -2,6 +2,7 @@ import { useEffect, useState,useRef } from 'react'
 import Card from './Card'
 import { useNavigate, useOutletContext } from "react-router"
 import { useLocation } from "react-router";
+import StackIcon from "tech-stack-icons";
 
 
 function Content(){
@@ -33,6 +34,20 @@ function Content(){
     "education": "/education",
     "contact": "/contact"
   }
+
+  const techStack=[
+    {icon : "html5",name :"HTML"},
+    {icon : "css3",name:"CSS"},
+    {icon : "js",name :"Javascript"},
+    {icon : "typescript",name:"Typescript"},
+    {icon : "python",name:"Python"},
+    {icon : "react",name:"ReactJS"},
+    {icon : "nextjs2",name:"NextJS"},
+    {icon : "vercel",name:"Vercel"},
+    {icon : "docker",name:"Docker"},
+    {icon : "git",name:"Git"},
+    {icon : "postman",name:"Postman"},
+  ]
 
 
   useEffect(()=>{
@@ -84,22 +99,44 @@ function Content(){
      }
   }
 
+
 return(
         
 <div className="content">
   <section ref={observer} id="intro">
     <h1>Wade Namada — Developer & Problem Solver</h1>
     <h1 className="grey">Solving real life problems,one line of code at a time</h1>
-    <p>Currently focused on full-stack development and creating tools that make complex data accessible.</p>
+    <p>
+      I build thoughtful web applications  with clean architecture and scalable design. 
+      Currently focused on full-stack development and exploring data engineering.
+    </p>
     
   </section>
 
   <section ref={observer} id="aboutme">
-    <h1 className="show">About</h1>
+    <h1 className="show">About Me</h1>
     <h1 className="grey">Who I Am and How I Think About Code</h1>
-    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+    <p>
+      I got into development young — fascinated by how computers worked and captivated by 
+      the idea that someone with the right skills could build or break anything from behind 
+      a screen. While I'm not chasing the hacker aesthetic anymore, that early curiosity about 
+      systems and how things work under the hood has stuck with me. 
+    </p>
+
+    <p>
+      What keeps me engaged now is building systems that not only solve real problems today, 
+      but are designed to scale and evolve. My focus is on understanding how different parts 
+      of a system interact from frontend to backend and how thoughtful architecture early 
+      on shapes long-term reliability. 
+    </p>
+
+    <p>
+      That systems-level thinking has naturally led me toward 
+      data engineering, where I'm exploring how data flows through applications and how it can 
+      be structured to deliver real value.
+    </p>
+   
+
   </section>
 
   <section ref={observer} id="projects">
@@ -148,6 +185,21 @@ return(
   <section ref={observer} id="skills-tools">
     <h1>Skills</h1>
     <h1 className="grey">Technologies and Tools I Work With</h1>
+    <p>
+     Below are the technologies and tools I use to build reliable, scalable systems across the stack.
+    </p>
+    <div className='badge-container'>
+
+      {techStack.map((tech) => (
+          <span className='badge' key={tech.icon}>
+            <StackIcon 
+              name={tech.icon}
+              className="stack-icon" 
+            />  
+            {tech.name}
+          </span>
+      ))}
+    </div>
   </section>
 
   <section ref={observer} id="experience">
@@ -161,7 +213,7 @@ return(
   </section>
 
   <section ref={observer} id="contact">
-    <h1>Contact</h1>
+    <h1>Contact Me</h1>
     <h1 className="grey">Let’s Connect or Build Something Together</h1>
   </section>
 
@@ -175,6 +227,7 @@ return(
     https://c.tenor.com/SETdjIBbTTcAAAAd/tenor.gif
   */}
 </div>
+
 
 )}
 
