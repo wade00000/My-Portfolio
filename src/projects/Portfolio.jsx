@@ -4,6 +4,9 @@ import { useEffect } from "react"
 import { LuArrowLeft } from "react-icons/lu";
 
 export default function Portfolio(){
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return(
         <div className="content">
             <section>
