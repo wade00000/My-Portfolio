@@ -426,16 +426,28 @@ a {
   height: 15px;
 }
 
+.email{
+  display: inline-flex;
+  gap: 8px;
+  padding: 5px;
 
+  transition: 300ms ease;
+  background-color: var(--accent-color);
+  border-radius: 4px;
 
-/* provides a step like visual
-.timeline-event:nth-child(even) .timeline-content {
-  margin-left: 40px;   push content to the other side 
+  color: white;
+  font-size: 14px;
+  font-family: 'Geist', sans-serif;
+  margin-top: 30px;
+  font-weight: 400;
+
 }
-.timeline-event:nth-child(odd) .timeline-content {
-  margin-left: 0;
-} */
 
+.email:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: rgb(154,16,154,0.85);
+}
 
 @media (max-width: 768px) {
   /* Navbar adjustments */

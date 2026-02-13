@@ -3,7 +3,7 @@ import Card from './Card'
 import { useNavigate, useOutletContext } from "react-router"
 import { useLocation } from "react-router";
 import StackIcon from "tech-stack-icons";
-import { GiGraduateCap } from "react-icons/gi";
+import { LuMail } from "react-icons/lu";
 
 
 function Content(){
@@ -87,7 +87,7 @@ function Content(){
             navigate(route,{replace : true}) // replace : true doesnt add to browser history preventing a trigger of scroll logic
           }}
       })},{
-            threshold: 0.5,
+            threshold: 0.6,
             rootMargin: "-20% 0px -20% 0px"
         })
 
@@ -112,6 +112,7 @@ return(
       I build thoughtful web applications  with clean architecture and scalable design. 
       Currently focused on full-stack development and exploring data engineering.
     </p>
+    <a className='email'  href='mailto:meantoine12@gmail.com'><LuMail size={18}/>Email Me</a>
     
   </section>
 
